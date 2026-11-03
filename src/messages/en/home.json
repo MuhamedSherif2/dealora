@@ -1,0 +1,42 @@
+{
+    "hero": {
+        "title": "Find Your Perfect Property",
+        "subtitle": "Discover the best properties for sale and rent in one place",
+        "searchPlaceholder": "Search by city, area, or property",
+        "searchButton": "Search Now",
+        "buy": "Buy",
+        "rent": "Rent"
+    },
+    "categories": {
+        "title": "Explore Properties",
+        "subtitle": "Choose the property type that suits your needs",
+        "apartment": "Apartments",
+        "villa": "Villas",
+        "house": "Houses",
+        "office": "Offices",
+        "land": "Land",
+        "commercial": "Commercial Properties"
+    },
+    "featured": {
+        "title": "Featured Properties",
+        "subtitle": "Discover a curated selection of the best properties",
+        "viewAll": "View All Properties",
+        "details": "View Details",
+        "noProperties": "No properties available at the moment"
+    },
+    "about": {
+        "title": "Why Choose Dealora?",
+        "subtitle": "We make finding your ideal property easier and faster",
+        "verified": "Trusted Properties",
+        "verifiedDescription": "Explore properties with clear and reliable information",
+        "easySearch": "Easy Search",
+        "easySearchDescription": "Find the right property using our search and filtering tools",
+        "support": "Continuous Support",
+        "supportDescription": "Our team is ready to help you throughout your property journey"
+    },
+    "cta": {
+        "title": "Looking for Your Next Property?",
+        "subtitle": "Start your journey today and discover properties that match your needs",
+        "button": "Explore Properties"
+    }
+}

@@ -3,11 +3,15 @@ import { Geist, Geist_Mono } from "next/font/google";
 import { Toaster } from "react-hot-toast";
 import { existsSync } from "node:fs";
 import { join } from "node:path";
-import { getLocale } from "next-intl/server";
+import { NextIntlClientProvider, hasLocale } from "next-intl";
+import { setRequestLocale } from "next-intl/server";
+import { ThemeProvider } from "@/providers/themeProvider";
+import { notFound } from "next/navigation";
 
 import "@/styles/globals.css";
 import ReduxProvider from "@/providers/ReduxProvider";
 
+import { routing } from "@/i18n/routing";
 import { siteUrl } from "@/config/site";
 import { getCanonicalUrl, getLocaleAlternates } from "@/lib/seo";
 
@@ -21,8 +25,12 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-export async function generateMetadata(): Promise<Metadata> {
-  const locale = await getLocale();
+export function generateStaticParams() {
+  return routing.locales.map((locale) => ({ locale }));
+}
+
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const { locale } = await params;
   const isArabic = locale === "ar";
 
   const title = isArabic
@@ -176,22 +184,36 @@ type LayoutProps = {
   params: Promise<{ locale: string }>;
 };
 
-export default async function RootLayout({
-  children,
-  params,
-}: LayoutProps) {
+export default async function RootLayout({ children, params }: LayoutProps) {
   const { locale } = await params;
+
+  if (!hasLocale(routing.locales, locale)) notFound();
+  setRequestLocale(locale);
 
   const direction = locale === "ar" ? "rtl" : "ltr";
 
   return (
-    <html lang={locale} dir={direction} className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}>
+    <html lang={locale} dir={direction} suppressHydrationWarning className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}>
       <body className="min-h-full flex flex-col">
-        <ReduxProvider>
-          {children}
+        <NextIntlClientProvider>
+          <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+            <ReduxProvider>
+              {children}
 
-          <Toaster position={locale === "ar" ? "top-left" : "top-right"} reverseOrder={false} gutter={8} toastOptions={{ duration: 4000, style: { fontFamily: "var(--font-geist-sans)", borderRadius: "12px", fontSize: "14px", padding: "12px 16px", }, success: { duration: 3000, }, error: { duration: 4000, }, }} />
-        </ReduxProvider>
+              <Toaster
+                position={locale === "ar" ? "top-left" : "top-right"}
+                reverseOrder={false}
+                gutter={8}
+                toastOptions={{
+                  duration: 4000,
+                  style: { fontFamily: "var(--font-geist-sans)", borderRadius: "12px", fontSize: "14px", padding: "12px 16px" },
+                  success: { duration: 3000 },
+                  error: { duration: 4000 },
+                }}
+              />
+            </ReduxProvider>
+          </ThemeProvider>
+        </NextIntlClientProvider>
       </body>
     </html>
   );

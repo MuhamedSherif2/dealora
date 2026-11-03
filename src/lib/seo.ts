@@ -1,23 +1,18 @@
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://your-domain.com";
-const locales = ["ar", "en"] as const;
+import { siteUrl } from "@/config/site";
 
-type Locale = (typeof locales)[number];
+// "/" becomes "", "/properties/" becomes "/properties"
+const cleanPath = (pathname: string) =>
+  (pathname.startsWith("/") ? pathname : `/${pathname}`).replace(/\/+$/, "");
 
-export function getCanonicalUrl(locale: string, pathname: string = "/",): string {
-    const normalizedPath = pathname.startsWith("/") ? pathname : `/${pathname}`
-    const cleanPath = normalizedPath.replace(/\/+$/, "") || "";
-
-    return `${siteUrl}/${locale}${cleanPath}`;
+export function getCanonicalUrl(locale: string, pathname = "/"): string {
+  return `${siteUrl}/${locale}${cleanPath(pathname)}`;
 }
 
-export function getLocaleAlternates(pathname: string = "/",): Record<string, string> {
-    const normalizedPath = pathname.startsWith("/") ? pathname : `/${pathname}`;
-
-    const cleanPath = normalizedPath.replace(/\/+$/, "") || "";
-
-    return {
-        ar: `${siteUrl}/ar${cleanPath}`,
-        en: `${siteUrl}/en${cleanPath}`,
-        "x-default": `${siteUrl}/en${cleanPath}`,
-    };
+export function getLocaleAlternates(pathname = "/"): Record<string, string> {
+  const path = cleanPath(pathname);
+  return {
+    ar: `${siteUrl}/ar${path}`,
+    en: `${siteUrl}/en${path}`,
+    "x-default": `${siteUrl}/en${path}`,
+  };
 }
