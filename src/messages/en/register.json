@@ -1,0 +1,14 @@
+{
+    "title": "Create an Account",
+    "subtitle": "Join Dealora and start your real estate journey",
+    "name": "Full Name",
+    "phone": "Phone Number",
+    "phonePlaceholder": "Enter your phone number",
+    "email": "Email Address",
+    "password": "Password",
+    "submit": "Create Account",
+    "loading": "Creating Account...",
+    "failed": "An error occurred while creating your account. Please try again.",
+    "haveAccount": "Already have an account?",
+    "login": "Sign In"
+}

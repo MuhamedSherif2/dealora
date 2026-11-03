@@ -1,0 +1,11 @@
+{
+    "title": "Welcome Back",
+    "subtitle": "Sign in to your account and continue your real estate journey",
+    "email": "Email Address",
+    "password": "Password",
+    "forgot": "Forgot Password?",
+    "submit": "Sign In",
+    "failed": "Login failed. Please check your email and password and try again.",
+    "noAccount": "Don't have an account?",
+    "register": "Create an Account"
+}

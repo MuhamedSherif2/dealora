@@ -24,7 +24,7 @@ export default function LanguageSwitcher() {
             disabled={isPending}
             aria-label={t("switchLanguage")}
             onClick={() => startTransition(() => router.replace(pathname, { locale: nextLocale }))}
-            className="inline-flex h-10 cursor-pointer items-center gap-2 rounded-[var(--radius)] border border-border bg-card px-3 text-sm text-foreground transition-colors hover:bg-muted focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring disabled:opacity-50"
+            className="inline-flex h-10 cursor-pointer items-center gap-2 rounded-(--radius) border border-border bg-card px-3 text-sm text-foreground transition-colors hover:bg-muted focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring disabled:opacity-50"
         >
             <GlobeIcon className="size-4" />
             <span lang={nextLocale}>{LABELS[nextLocale]}</span>
