@@ -1,0 +1,53 @@
+{
+    "hero": {
+        "title": "Find your next property",
+        "subtitle": "Browse homes, offices and land, then book a viewing in minutes",
+        "type": "Property type",
+        "anyType": "Any type",
+        "city": "City",
+        "cityPlaceholder": "e.g. Dubai",
+        "bedrooms": "Bedrooms",
+        "any": "Any",
+        "search": "Search"
+    },
+    "types": {
+        "title": "Browse by type",
+        "subtitle": "Pick the kind of property you are looking for"
+    },
+    "cities": {
+        "title": "Popular cities",
+        "subtitle": "Where most of our listings are",
+        "count": "{count, plural, one {# property} other {# properties}}"
+    },
+    "how": {
+        "title": "How it works",
+        "subtitle": "From search to viewing in three steps",
+        "steps": {
+            "search": {
+                "title": "Search",
+                "desc": "Filter by city, type, price and bedrooms to find what fits you."
+            },
+            "book": {
+                "title": "Book a viewing",
+                "desc": "Choose a date and time that suits you. No account needed."
+            },
+            "contact": {
+                "title": "Talk to the agent",
+                "desc": "Our agent confirms your viewing and answers every question."
+            }
+        }
+    },
+    "saveBand": {
+        "title": "Save your search",
+        "subtitle": "Tell us what you are looking for and we will notify you when a match is listed",
+        "cta": "Save a search",
+        "loginCta": "Log in to save a search",
+        "modalTitle": "Save this search"
+    },
+    "footer": {
+        "tagline": "Dealora helps you discover properties and book viewings with trusted agents.",
+        "explore": "Explore",
+        "account": "Account",
+        "rights": "All rights reserved."
+    }
+}

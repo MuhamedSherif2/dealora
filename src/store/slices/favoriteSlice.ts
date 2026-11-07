@@ -7,8 +7,8 @@ export const favoriteApi = createApi({
     baseQuery,
     tagTypes: ["Favorite"],
     endpoints: (builder) => ({
-        listFavorite: builder.query<GetFavoritesResponse, void>({
-            query: () => ({ url: "favorites", method: "GET" }),
+        listFavorite: builder.query<GetFavoritesResponse, { lang?: "ar" | "en" } | void>({
+            query: (params) => ({ url: "favorites", method: "GET", params: params ?? undefined }),
             providesTags: ["Favorite"]
         }),
 

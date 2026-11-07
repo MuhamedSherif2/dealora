@@ -1,0 +1,41 @@
+{
+    "error": "Could not load properties",
+    "retry": "Try again",
+    "empty": "No properties available right now",
+    "yes": "Yes",
+    "title": "Properties",
+    "no": "No",
+    "beds": "{count, plural, one {# bed} other {# beds}}",
+    "baths": "{count, plural, one {# bath} other {# baths}}",
+    "featuredTitle": "Featured properties",
+    "featuredSubtitle": "Hand-picked homes worth a look",
+    "columns": {
+        "title": "Title",
+        "location": "Location",
+        "country": "Country",
+        "type": "Type",
+        "purpose": "Purpose",
+        "price": "Price",
+        "bedrooms": "Bedrooms",
+        "bathrooms": "Bathrooms",
+        "area": "Area",
+        "furnishing": "Furnishing",
+        "paymentMethod": "Payment",
+        "completionStatus": "Completion",
+        "amenities": "Amenities",
+        "featured": "Featured",
+        "status": "Status",
+        "agent": "Agent",
+        "images": "Images",
+        "actions": "Actions",
+        "action1": "update",
+        "action2": "delete"
+    },
+    "viewDetails": "viewDetails",
+    "favorite": {
+        "add": "Add to favorites",
+        "remove": "Remove from favorites",
+        "loginRequired": "Log in to save favorites",
+        "failed": "Could not update favorites"
+    }
+}

@@ -1,0 +1,71 @@
+{
+    "brand": "Dealora",
+    "nav": {
+        "overview": "نظرة عامة",
+        "properties": "العقارات",
+        "leads": "العملاء المحتملون",
+        "viewings": "المعاينات",
+        "users": "المستخدمون",
+        "webhookLogs": "سجل الـ Webhooks",
+        "backToSite": "العودة للموقع",
+        "sections": {
+            "main": "الرئيسية",
+            "admin": "الإدارة"
+        }
+    },
+    "topbar": {
+        "openMenu": "فتح القائمة",
+        "closeMenu": "إغلاق القائمة",
+        "account": "الحساب",
+        "logout": "تسجيل الخروج",
+        "loggedOut": "تم تسجيل الخروج"
+    },
+    "pages": {
+        "overview": "نظرة عامة على لوحة التحكم",
+        "properties": "العقارات",
+        "leads": "العملاء المحتملون",
+        "viewings": "المعاينات",
+        "users": "المستخدمون",
+        "webhookLogs": "سجل الـ Webhooks"
+    },
+    "overview": {
+        "welcome": "أهلًا بعودتك، {name}",
+        "subtitle": "إليك ما يحدث في عقاراتك",
+        "cards": {
+            "totalProperties": "إجمالي العقارات",
+            "totalLeads": "إجمالي العملاء المحتملين",
+            "conversionRate": "معدل التحويل",
+            "upcomingViewings": "المعاينات القادمة",
+            "totalViews": "إجمالي المشاهدات"
+        },
+        "propertiesByStatus": "العقارات حسب الحالة",
+        "leadsByStatus": "العملاء حسب الحالة",
+        "leadsLast30Days": "العملاء خلال آخر 30 يومًا",
+        "noData": "لا توجد بيانات بعد"
+    },
+    "common": {
+        "loading": "جارٍ التحميل...",
+        "error": "حدث خطأ ما",
+        "retry": "إعادة المحاولة",
+        "empty": "لا يوجد شيء هنا بعد",
+        "search": "بحث",
+        "searchPlaceholder": "ابحث...",
+        "filter": "تصفية",
+        "all": "الكل",
+        "actions": "الإجراءات",
+        "view": "عرض",
+        "edit": "تعديل",
+        "delete": "حذف",
+        "save": "حفظ",
+        "cancel": "إلغاء",
+        "confirm": "تأكيد",
+        "close": "إغلاق",
+        "yes": "نعم",
+        "no": "لا",
+        "previous": "السابق",
+        "next": "التالي",
+        "page": "صفحة {page} من {pages}",
+        "total": "الإجمالي {count}",
+        "noAccess": "ليس لديك صلاحية الوصول لهذه الصفحة"
+    }
+}

@@ -1,23 +1,35 @@
-"use client";
+import { Suspense } from "react";
+import { setRequestLocale } from "next-intl/server";
+import Loading from "@/components/ui/Loading";
+import HeroSection from "@/feature/guest/home/HeroSection";
+import PropertyTypes from "@/feature/guest/home/PropertyTypes";
+import SaveSearchBand from "@/feature/guest/home/SaveSearchBand";
+import PopularCities from "@/feature/guest/home/PopularCities";
+import HowItWorks from "@/feature/guest/home/HowItWorks";
+import GetFeaturedProperties from "@/feature/guest/properties/GetFeaturedProperties";
 
-import Navbar from "@/components/feature/layout/Navbar";
-import Button from "@/components/ui/button";
-import Input from "@/components/ui/input";
-import { useTranslations } from "next-intl";
-
-export default function Home() {
-  const t = useTranslations("Home");
+export default async function Home({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
+  setRequestLocale(locale);
 
   return (
-    <main>
-      <Navbar />
-      <h1>{t("hero.title")}</h1>
-      <p>{t("hero.subtitle")}</p>
+    <>
+      <HeroSection />
+      <PropertyTypes />
 
-      <button>{t("hero.searchButton")}</button>
-      <Button variant="outline"> Submit </ Button>
+      <section className="mx-auto w-full max-w-7xl px-4 py-8">
+        <Suspense fallback={<Loading />}>
+          <GetFeaturedProperties />
+        </Suspense>
+      </section>
 
-      <Input />
-    </main>
+      <SaveSearchBand />
+
+      <Suspense fallback={null}>
+        <PopularCities />
+      </Suspense>
+
+      <HowItWorks />
+    </>
   );
 }

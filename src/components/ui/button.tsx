@@ -1,7 +1,8 @@
 import type { ButtonHTMLAttributes } from "react";
 
-type ButtonVariant = "primary" | "secondary" | "outline";
 type ButtonSize = "sm" | "md" | "lg";
+type ButtonVariant = "primary" | "secondary" | "outline" | "destructive";
+// inside variants:
 
 type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
     variant?: ButtonVariant;
@@ -37,6 +38,7 @@ function Button({
         primary: "bg-primary text-primary-foreground hover:bg-[var(--primary-hover)]",
         secondary: "bg-secondary text-secondary-foreground hover:bg-accent",
         outline: "border border-border bg-transparent text-foreground hover:bg-muted",
+        destructive: "bg-destructive text-destructive-foreground hover:opacity-90",
     };
 
     const sizes: Record<ButtonSize, string> = {

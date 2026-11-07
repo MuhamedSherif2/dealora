@@ -1,0 +1,92 @@
+{
+    "type": {
+        "apartment": "Apartment",
+        "villa": "Villa",
+        "townhouse": "Townhouse",
+        "penthouse": "Penthouse",
+        "studio": "Studio",
+        "duplex": "Duplex",
+        "office": "Office",
+        "shop": "Shop",
+        "warehouse": "Warehouse",
+        "land": "Land",
+        "building": "Building"
+    },
+    "purpose": {
+        "sale": "For sale",
+        "rent": "For rent"
+    },
+    "propertyStatus": {
+        "available": "Available",
+        "reserved": "Reserved",
+        "sold": "Sold",
+        "rented": "Rented"
+    },
+    "furnishing": {
+        "furnished": "Furnished",
+        "semi_furnished": "Semi-furnished",
+        "unfurnished": "Unfurnished"
+    },
+    "completion": {
+        "ready": "Ready",
+        "off_plan": "Off-plan"
+    },
+    "paymentMethod": {
+        "cash": "Cash",
+        "installments": "Installments",
+        "mortgage": "Mortgage"
+    },
+    "country": {
+        "AE": "United Arab Emirates",
+        "SA": "Saudi Arabia",
+        "KW": "Kuwait",
+        "QA": "Qatar",
+        "BH": "Bahrain",
+        "OM": "Oman"
+    },
+    "rentPeriod": {
+        "yearly": "Yearly",
+        "monthly": "Monthly",
+        "weekly": "Weekly",
+        "daily": "Daily"
+    },
+    "areaUnit": {
+        "sqm": "m²",
+        "sqft": "sq ft"
+    },
+    "role": {
+        "client": "Client",
+        "agent": "Agent",
+        "admin": "Admin"
+    },
+    "leadStatus": {
+        "new": "New",
+        "contacted": "Contacted",
+        "viewing_scheduled": "Viewing scheduled",
+        "negotiating": "Negotiating",
+        "won": "Won",
+        "lost": "Lost"
+    },
+    "viewingStatus": {
+        "pending": "Pending",
+        "confirmed": "Confirmed",
+        "completed": "Completed",
+        "cancelled": "Cancelled",
+        "no_show": "No show"
+    },
+    "leadSource": {
+        "website": "Website",
+        "whatsapp": "WhatsApp",
+        "facebook": "Facebook",
+        "instagram": "Instagram",
+        "chatbot": "Chatbot",
+        "phone": "Phone",
+        "other": "Other"
+    },
+    "webhookStatus": {
+        "pending": "Pending",
+        "success": "Success",
+        "failed": "Failed",
+        "skipped": "Skipped"
+    }
+}

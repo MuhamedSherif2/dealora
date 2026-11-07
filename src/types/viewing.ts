@@ -48,7 +48,9 @@ export type RequestViewingResponse = ApiResponse<{ viewing: Viewing }>;
 ========================= */
 
 export interface GetViewingsParams extends PaginationParams {
-  status?: string; // comma separated
+  status?: string;
+  lang?: Language;
+  upcoming?: "true"
 }
 export type GetViewingsResponse = PaginatedResponse<Viewing>;
 

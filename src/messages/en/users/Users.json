@@ -1,0 +1,25 @@
+{
+    "title": "Users",
+    "total": "{count} users",
+    "columns": {
+        "name": "Name",
+        "email": "Email",
+        "phone": "Phone",
+        "role": "Role",
+        "company": "Company",
+        "language": "Language",
+        "status": "Status",
+        "lastLogin": "Last login",
+        "createdAt": "Joined"
+    },
+    "languages": {
+        "ar": "Arabic",
+        "en": "English"
+    },
+    "active": "Active",
+    "inactive": "Inactive",
+    "never": "Never",
+    "error": "Could not load users",
+    "retry": "Try again",
+    "empty": "No users yet"
+}

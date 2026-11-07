@@ -1,0 +1,26 @@
+{
+    "title": "Save this search",
+    "subtitle": "We'll notify you when a matching property is listed",
+    "name": "Search name",
+    "namePlaceholder": "e.g. 2-bed apartment in Dubai",
+    "any": "Any",
+    "purpose": "Purpose",
+    "type": "Type",
+    "country": "Country",
+    "city": "City",
+    "district": "District",
+    "currency": "Currency",
+    "minPrice": "Min price",
+    "maxPrice": "Max price",
+    "minBedrooms": "Min bedrooms",
+    "furnishing": "Furnishing",
+    "notifyVia": "Notify me via",
+    "channels": {
+        "whatsapp": "WhatsApp",
+        "email": "Email"
+    },
+    "save": "Save search",
+    "saved": "Search saved",
+    "needOne": "Choose at least one condition",
+    "failed": "Could not save the search"
+}

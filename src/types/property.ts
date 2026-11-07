@@ -7,9 +7,7 @@ import type { AgentBrief } from "./user";
    Property Enums
 ========================= */
 
-export type PropertyType =
-  | "apartment" | "villa" | "townhouse" | "penthouse" | "studio" | "duplex"
-  | "office" | "shop" | "warehouse" | "land" | "building";
+export type PropertyType = "apartment" | "villa" | "townhouse" | "penthouse" | "studio" | "duplex" | "office" | "shop" | "warehouse" | "land" | "building";
 export type Purpose = "sale" | "rent";
 export type RentPeriod = "yearly" | "monthly" | "weekly" | "daily";
 export type AreaUnit = "sqm" | "sqft";
@@ -67,7 +65,7 @@ export interface Property {
   location: PropertyLocation;
   amenities: string[];
   images: PropertyImage[];
-
+  lang?: Language;
   status: PropertyStatus;
   agent: string | AgentBrief;
   isFeatured: boolean;
@@ -115,9 +113,12 @@ export interface GetPropertiesParams extends PaginationParams {
   completionStatus?: string;
   amenities?: string;       // comma separated, all must match
   isFeatured?: "true";
+  page?: number;
+  limit?: number;
   search?: string;
   lat?: number;
   lng?: number;
+  lang?: Language;
   radius?: number;          // km
   sort?: PropertySort;
 }
@@ -208,3 +209,13 @@ export interface RemovePropertyImageRequest {
 export type RemovePropertyImageResponse = ApiResponse<{ images: PropertyImage[] }>;
 
 // DELETE /properties/:id -> 204 (no body)
+
+
+// types/property.ts
+export interface CityStat {
+  country: Country;
+  city: { ar?: string; en?: string };
+  count: number;
+  image: string | null;
+}
+export type GetPropertyCitiesResponse = ApiResponse<CityStat[]>;

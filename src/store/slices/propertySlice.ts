@@ -1,6 +1,6 @@
 import { createApi } from "@reduxjs/toolkit/query/react";
 import baseQuery from "../baseQuery";
-import type { GetPropertiesParams, GetPropertiesResponse, GetManagedPropertiesParams, GetManagedPropertiesResponse, GetFeaturedPropertiesResponse, GetPropertyResponse, CreatePropertyPayload, CreatePropertyResponse, UpdatePropertyRequest, UpdatePropertyResponse, UpdatePropertyStatusRequest, UpdatePropertyStatusResponse, AddPropertyImagesResponse, RemovePropertyImageRequest, RemovePropertyImageResponse, } from "@/types/property";
+import type { GetPropertiesParams, GetPropertiesResponse, GetManagedPropertiesParams, GetManagedPropertiesResponse, GetFeaturedPropertiesResponse, GetPropertyResponse, CreatePropertyPayload, CreatePropertyResponse, UpdatePropertyRequest, UpdatePropertyResponse, UpdatePropertyStatusRequest, UpdatePropertyStatusResponse, AddPropertyImagesResponse, RemovePropertyImageRequest, RemovePropertyImageResponse, GetPropertyCitiesResponse, } from "@/types/property";
 
 export const propertiesApi = createApi({
     reducerPath: "properties",
@@ -15,8 +15,8 @@ export const propertiesApi = createApi({
         }),
 
         // GET /properties/featured
-        getPropertiesFeatured: builder.query<GetFeaturedPropertiesResponse, void>({
-            query: () => ({ url: "properties/featured", method: "GET", }),
+        getPropertiesFeatured: builder.query<GetFeaturedPropertiesResponse, { lang?: "ar" | "en" } | void>({
+            query: (params) => ({ url: "properties/featured", method: "GET", params: params ?? undefined, }),
             providesTags: ["Properties"],
         }),
 
@@ -27,8 +27,18 @@ export const propertiesApi = createApi({
         }),
 
         // GET /properties/:idOrSlug
-        getProperty: builder.query<GetPropertyResponse, string>({
-            query: (idOrSlug) => ({ url: `properties/${idOrSlug}`, method: "GET", }),
+        getProperty: builder.query<GetPropertyResponse, { idOrSlug: string; lang?: "ar" | "en" }>({
+            query: ({ idOrSlug, lang }) => ({
+                url: `properties/${idOrSlug}`,
+                method: "GET",
+                params: lang ? { lang } : undefined,
+            }),
+            providesTags: ["Properties"],
+        }),
+
+        // in propertiesApi
+        getPropertyCities: builder.query<GetPropertyCitiesResponse, void>({
+            query: () => ({ url: "properties/cities", method: "GET" }),
             providesTags: ["Properties"],
         }),
 
@@ -75,6 +85,7 @@ export const {
     useGetPropertiesFeaturedQuery,
     useGetManagedPropertiesQuery,
     useGetPropertyQuery,
+    useGetPropertyCitiesQuery,
     useAddPropertyMutation,
     useAddImagePropertyMutation,
     useUpdatePropertyMutation,

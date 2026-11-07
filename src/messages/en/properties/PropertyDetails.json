@@ -1,0 +1,27 @@
+{
+    "backToList": "Back to properties",
+    "notFound": "This property was not found",
+    "error": "Could not load the property",
+    "retry": "Try again",
+    "featured": "Featured",
+    "image": "Image",
+    "description": "Description",
+    "specsTitle": "Property details",
+    "amenities": "Amenities",
+    "agent": "Listed by",
+    "specs": {
+        "type": "Type",
+        "purpose": "Purpose",
+        "status": "Status",
+        "bedrooms": "Bedrooms",
+        "bathrooms": "Bathrooms",
+        "area": "Area",
+        "furnishing": "Furnishing",
+        "completion": "Completion",
+        "floor": "Floor",
+        "developer": "Developer",
+        "handover": "Handover",
+        "permit": "Permit number",
+        "payment": "Payment methods"
+    }
+}

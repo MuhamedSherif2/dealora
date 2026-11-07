@@ -1,0 +1,85 @@
+{
+    "nav": {
+        "label": "Account menu",
+        "profile": "Profile",
+        "favorites": "Favorites",
+        "savedSearches": "Saved searches",
+        "viewings": "My viewings"
+    },
+    "profile": {
+        "error": "Could not load your profile",
+        "retry": "Try again",
+        "active": "Active",
+        "inactive": "Inactive",
+        "memberSince": "Member since {date}",
+        "formTitle": "Personal information",
+        "name": "Full name",
+        "email": "Email",
+        "emailHint": "Email cannot be changed",
+        "phone": "Phone number",
+        "phoneHint": "International format, e.g. +971501234567",
+        "language": "Language",
+        "languages": {
+            "ar": "Arabic",
+            "en": "English"
+        },
+        "company": "Company",
+        "license": "License number",
+        "save": "Save changes",
+        "saved": "Profile updated",
+        "failed": "Could not update your profile"
+    },
+    "favorites": {
+        "title": "Favorites",
+        "subtitle": "Properties you saved to look at later",
+        "empty": "You have no favorite properties yet",
+        "browse": "Browse properties",
+        "error": "Could not load your favorites",
+        "retry": "Try again"
+    },
+    "savedSearches": {
+        "title": "Saved searches",
+        "subtitle": "We notify you when a new property matches",
+        "empty": "You have no saved searches yet",
+        "emptyCta": "Save your first search",
+        "unnamed": "Untitled search",
+        "notifyVia": "Notify via",
+        "channels": {
+            "whatsapp": "WhatsApp",
+            "email": "Email"
+        },
+        "active": "Active",
+        "paused": "Paused",
+        "run": "Show results",
+        "delete": "Delete",
+        "deleteConfirm": "Delete this saved search?",
+        "deleted": "Search deleted",
+        "updated": "Search updated",
+        "minBeds": "{count}+ bedrooms",
+        "priceFrom": "From {value}",
+        "priceUpTo": "Up to {value}",
+        "priceBetween": "{min} – {max}",
+        "failed": "Something went wrong",
+        "error": "Could not load your searches",
+        "retry": "Try again"
+    },
+    "viewings": {
+        "title": "My viewings",
+        "subtitle": "Your booked property viewings",
+        "tabs": {
+            "upcoming": "Upcoming",
+            "all": "All"
+        },
+        "empty": "No viewings here",
+        "browse": "Browse properties",
+        "notes": "Notes",
+        "viewProperty": "View property",
+        "propertyUnavailable": "Property no longer available",
+        "cancel": "Cancel viewing",
+        "cancelConfirm": "Cancel this viewing?",
+        "cancelled": "Viewing cancelled",
+        "failed": "Could not update the viewing",
+        "error": "Could not load your viewings",
+        "retry": "Try again"
+    }
+}

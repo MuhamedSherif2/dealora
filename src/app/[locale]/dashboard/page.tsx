@@ -1,9 +1,10 @@
 
-function Page(){
+function page() {
     return(
         <section>
-            <h1>Hello dashboard</h1>
+            Hello dashboard
         </section>
     )
 }
-export default Page
+
+export default page

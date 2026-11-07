@@ -1,4 +1,3 @@
-
 import { createApi } from "@reduxjs/toolkit/query/react";
 import baseQuery from "../baseQuery";
 
@@ -18,7 +17,7 @@ export const savedSearchApi = createApi({
     endpoints: (builder) => ({
         // GET /saved-searches
         getSavedSearch: builder.query<GetSavedSearchesResponse, void>({
-            query: () => ({
+            query: (params) => ({
                 url: "saved-searches",
                 method: "GET",
             }),

@@ -1,0 +1,41 @@
+{
+  "error": "تعذّر تحميل العقارات",
+  "retry": "إعادة المحاولة",
+  "empty": "لا توجد عقارات حالياً",
+  "yes": "نعم",
+  "title": "العقارات",
+  "no": "لا",
+  "beds": "{count, plural, =0 {بدون غرف نوم} one {غرفة نوم} two {غرفتا نوم} few {# غرف نوم} other {# غرفة نوم}}",
+  "baths": "{count, plural, =0 {بدون حمامات} one {حمام} two {حمامان} few {# حمامات} other {# حمام}}",
+  "featuredTitle": "عقارات مميزة",
+  "featuredSubtitle": "اخترناها لك بعناية",
+  "columns": {
+    "title": "العنوان",
+    "location": "الموقع",
+    "country": "الدولة",
+    "type": "النوع",
+    "purpose": "الغرض",
+    "price": "السعر",
+    "bedrooms": "غرف النوم",
+    "bathrooms": "الحمامات",
+    "area": "المساحة",
+    "furnishing": "التأثيث",
+    "paymentMethod": "طريقة الدفع",
+    "completionStatus": "حالة الإنجاز",
+    "amenities": "المميزات",
+    "featured": "مميز",
+    "status": "الحالة",
+    "agent": "السمسار",
+    "action1": "تعديل",
+    "action2": "حذف",
+    "images": "الصور",
+    "actions": "الإجراءات"
+  },
+  "viewDetails": "التفاصيل",
+  "favorite": {
+    "add": "أضف إلى المفضلة",
+    "remove": "أزل من المفضلة",
+    "loginRequired": "سجّل الدخول لحفظ المفضلة",
+    "failed": "تعذّر تحديث المفضلة"
+  }
+}

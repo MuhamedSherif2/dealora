@@ -1,0 +1,27 @@
+{
+    "backToList": "العودة للعقارات",
+    "notFound": "هذا العقار غير موجود",
+    "error": "تعذّر تحميل العقار",
+    "retry": "إعادة المحاولة",
+    "featured": "مميز",
+    "image": "صورة",
+    "description": "الوصف",
+    "specsTitle": "تفاصيل العقار",
+    "amenities": "المميزات",
+    "agent": "المعروض بواسطة",
+    "specs": {
+        "type": "النوع",
+        "purpose": "الغرض",
+        "status": "الحالة",
+        "bedrooms": "غرف النوم",
+        "bathrooms": "الحمامات",
+        "area": "المساحة",
+        "furnishing": "التأثيث",
+        "completion": "حالة الإنجاز",
+        "floor": "الطابق",
+        "developer": "المطور",
+        "handover": "موعد التسليم",
+        "permit": "رقم الترخيص",
+        "payment": "طرق الدفع"
+    }
+}

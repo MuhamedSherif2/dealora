@@ -1,0 +1,71 @@
+{
+    "brand": "Dealora",
+    "nav": {
+        "overview": "Overview",
+        "properties": "Properties",
+        "leads": "Leads",
+        "viewings": "Viewings",
+        "users": "Users",
+        "webhookLogs": "Webhook logs",
+        "backToSite": "Back to website",
+        "sections": {
+            "main": "Main",
+            "admin": "Administration"
+        }
+    },
+    "topbar": {
+        "openMenu": "Open menu",
+        "closeMenu": "Close menu",
+        "account": "Account",
+        "logout": "Log out",
+        "loggedOut": "Logged out"
+    },
+    "pages": {
+        "overview": "Dashboard overview",
+        "properties": "Properties",
+        "leads": "Leads",
+        "viewings": "Viewings",
+        "users": "Users",
+        "webhookLogs": "Webhook logs"
+    },
+    "overview": {
+        "welcome": "Welcome back, {name}",
+        "subtitle": "Here is what is happening with your listings",
+        "cards": {
+            "totalProperties": "Total properties",
+            "totalLeads": "Total leads",
+            "conversionRate": "Conversion rate",
+            "upcomingViewings": "Upcoming viewings",
+            "totalViews": "Total views"
+        },
+        "propertiesByStatus": "Properties by status",
+        "leadsByStatus": "Leads by status",
+        "leadsLast30Days": "Leads in the last 30 days",
+        "noData": "No data yet"
+    },
+    "common": {
+        "loading": "Loading...",
+        "error": "Something went wrong",
+        "retry": "Try again",
+        "empty": "Nothing here yet",
+        "search": "Search",
+        "searchPlaceholder": "Search...",
+        "filter": "Filter",
+        "all": "All",
+        "actions": "Actions",
+        "view": "View",
+        "edit": "Edit",
+        "delete": "Delete",
+        "save": "Save",
+        "cancel": "Cancel",
+        "confirm": "Confirm",
+        "close": "Close",
+        "yes": "Yes",
+        "no": "No",
+        "previous": "Previous",
+        "next": "Next",
+        "page": "Page {page} of {pages}",
+        "total": "{count} total",
+        "noAccess": "You do not have access to this page"
+    }
+}

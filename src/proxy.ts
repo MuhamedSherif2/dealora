@@ -7,8 +7,8 @@ const intlMiddleware = createMiddleware(routing);
 // same values the backend returns in user.role
 type Role = "admin" | "agent" | "client";
 
-const STAFF_PREFIXES = ["/dashboard"];               
-const ADMIN_ONLY_PREFIXES = ["/dashboard/users", "/dashboard/webhooks"];
+const STAFF_PREFIXES = ["/dashboard"];
+const ADMIN_ONLY_PREFIXES = ["/dashboard/users", "/dashboard/webhook-logs"];
 const CLIENT_PREFIXES = ["/account"];
 const GUEST_PREFIXES = ["/login", "/register", "/forgot-password", "/reset-password"];
 

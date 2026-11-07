@@ -53,5 +53,5 @@ export interface ApiErrorDetail {
 export interface ApiError {
   status: "fail" | "error";
   message: string;
-  details?: ApiErrorDetail[]; // NOTE: the backend calls it "details" (validation errors)
+  errors?: ApiErrorDetail[];   // not "details"
 }

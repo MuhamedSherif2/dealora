@@ -1,0 +1,92 @@
+{
+    "type": {
+        "apartment": "شقة",
+        "villa": "فيلا",
+        "townhouse": "تاون هاوس",
+        "penthouse": "بنتهاوس",
+        "studio": "استوديو",
+        "duplex": "دوبلكس",
+        "office": "مكتب",
+        "shop": "محل",
+        "warehouse": "مخزن",
+        "land": "أرض",
+        "building": "مبنى"
+    },
+    "purpose": {
+        "sale": "للبيع",
+        "rent": "للإيجار"
+    },
+    "propertyStatus": {
+        "available": "متاح",
+        "reserved": "محجوز",
+        "sold": "تم البيع",
+        "rented": "تم التأجير"
+    },
+    "furnishing": {
+        "furnished": "مفروش",
+        "semi_furnished": "مفروش جزئياً",
+        "unfurnished": "غير مفروش"
+    },
+    "completion": {
+        "ready": "جاهز",
+        "off_plan": "على الخريطة"
+    },
+    "paymentMethod": {
+        "cash": "كاش",
+        "installments": "تقسيط",
+        "mortgage": "تمويل عقاري"
+    },
+    "country": {
+        "AE": "الإمارات",
+        "SA": "السعودية",
+        "KW": "الكويت",
+        "QA": "قطر",
+        "BH": "البحرين",
+        "OM": "عُمان"
+    },
+    "rentPeriod": {
+        "yearly": "سنوي",
+        "monthly": "شهري",
+        "weekly": "أسبوعي",
+        "daily": "يومي"
+    },
+    "areaUnit": {
+        "sqm": "م²",
+        "sqft": "قدم²"
+    },
+    "role": {
+        "client": "عميل",
+        "agent": "سمسار",
+        "admin": "مدير"
+    },
+    "leadStatus": {
+        "new": "جديد",
+        "contacted": "تم التواصل",
+        "viewing_scheduled": "تم تحديد معاينة",
+        "negotiating": "قيد التفاوض",
+        "won": "تم الإغلاق بنجاح",
+        "lost": "خسارة"
+    },
+    "viewingStatus": {
+        "pending": "قيد الانتظار",
+        "confirmed": "مؤكدة",
+        "completed": "مكتملة",
+        "cancelled": "ملغاة",
+        "no_show": "لم يحضر"
+    },
+    "leadSource": {
+        "website": "الموقع",
+        "whatsapp": "واتساب",
+        "facebook": "فيسبوك",
+        "instagram": "إنستغرام",
+        "chatbot": "الشات بوت",
+        "phone": "هاتف",
+        "other": "أخرى"
+    },
+    "webhookStatus": {
+        "pending": "قيد الانتظار",
+        "success": "نجح",
+        "failed": "فشل",
+        "skipped": "تم التخطي"
+    }
+}

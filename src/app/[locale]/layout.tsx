@@ -5,8 +5,9 @@ import { existsSync } from "node:fs";
 import { join } from "node:path";
 import { NextIntlClientProvider, hasLocale } from "next-intl";
 import { setRequestLocale } from "next-intl/server";
-import { ThemeProvider } from "@/providers/themeProvider";
 import { notFound } from "next/navigation";
+import ThemeSync from "@/components/feature/layout/ThemeSync";
+import { themeInitScript } from "@/lib/theme";
 
 import "@/styles/globals.css";
 import ReduxProvider from "@/providers/ReduxProvider";
@@ -14,6 +15,10 @@ import ReduxProvider from "@/providers/ReduxProvider";
 import { routing } from "@/i18n/routing";
 import { siteUrl } from "@/config/site";
 import { getCanonicalUrl, getLocaleAlternates } from "@/lib/seo";
+import UserNavbar from "@/components/feature/layout/userNav";
+import UserFooter from "@/components/feature/layout/UserFooter";
+import { Suspense } from "react";
+import Loading from "@/components/ui/Loading";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -194,25 +199,22 @@ export default async function RootLayout({ children, params }: LayoutProps) {
 
   return (
     <html lang={locale} dir={direction} suppressHydrationWarning className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}>
+      <head>
+        {process.env.NODE_ENV === "production" && (
+          <script dangerouslySetInnerHTML={{ __html: themeInitScript }} />
+        )}
+      </head>
       <body className="min-h-full flex flex-col">
         <NextIntlClientProvider>
-          <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-            <ReduxProvider>
+          <ThemeSync />
+          <ReduxProvider>
+            <Suspense fallback={<Loading />}>
+              <UserNavbar />
+              <Toaster position={locale === "ar" ? "top-left" : "top-right"} reverseOrder={false} gutter={8} toastOptions={{ duration: 4000, style: { fontFamily: "var(--font-geist-sans)", borderRadius: "12px", fontSize: "14px", padding: "12px 16px" }, success: { duration: 3000 }, error: { duration: 4000 }, }} />
               {children}
-
-              <Toaster
-                position={locale === "ar" ? "top-left" : "top-right"}
-                reverseOrder={false}
-                gutter={8}
-                toastOptions={{
-                  duration: 4000,
-                  style: { fontFamily: "var(--font-geist-sans)", borderRadius: "12px", fontSize: "14px", padding: "12px 16px" },
-                  success: { duration: 3000 },
-                  error: { duration: 4000 },
-                }}
-              />
-            </ReduxProvider>
-          </ThemeProvider>
+              <UserFooter />
+            </Suspense>
+          </ReduxProvider>
         </NextIntlClientProvider>
       </body>
     </html>

@@ -1,0 +1,42 @@
+{
+    "title": "Viewings",
+    "tableSubtitle": "Manage and track property viewing requests",
+    "subtitle": "Pick a date and time that suits you",
+    "date": "Date and time",
+    "name": "Full name",
+    "phone": "Phone number",
+    "email": "Email",
+    "notes": "Notes",
+    "optional": "Optional",
+    "phoneHint": "Only needed if your account has no phone number",
+    "submit": "Request viewing",
+    "success": "Viewing requested. We will contact you soon",
+    "dateRequired": "Choose a date and time",
+    "datePast": "Choose a time in the future",
+    "contactRequired": "Name and phone are required",
+    "tooMany": "Too many requests. Please try again in a few minutes",
+    "failed": "Could not request the viewing",
+    "error": "Something went wrong while loading viewings",
+    "retry": "Try again",
+    "empty": "No viewing requests found",
+    "yes": "Yes",
+    "no": "No",
+    "columns": {
+        "property": "Property",
+        "lead": "Customer",
+        "phone": "Phone",
+        "agent": "Assigned agent",
+        "scheduledAt": "Viewing date",
+        "status": "Status",
+        "notes": "Notes",
+        "reminderSent": "Reminder sent",
+        "createdAt": "Request date"
+    },
+    "statuses": {
+        "pending": "Pending",
+        "confirmed": "Confirmed",
+        "completed": "Completed",
+        "cancelled": "Cancelled",
+        "no_show": "No show"
+    }
+}
