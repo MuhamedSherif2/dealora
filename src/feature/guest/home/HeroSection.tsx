@@ -7,6 +7,7 @@ import Button from "@/components/ui/button";
 import Input from "@/components/ui/input";
 import Select from "@/components/ui/select";
 import { PROPERTY_TYPES } from "@/constants/property";
+// import heroImg from "@/public/images"
 
 const BEDROOMS = ["1", "2", "3", "4+"];
 

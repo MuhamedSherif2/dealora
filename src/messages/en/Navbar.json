@@ -6,5 +6,7 @@
     "toggleTheme": "Toggle dark mode",
     "switchLanguage": "Switch language",
     "account": "My Account",
-    "dashboard": "Dashboard"
+    "dashboard": "Dashboard",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu"
 }

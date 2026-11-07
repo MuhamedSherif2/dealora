@@ -6,5 +6,7 @@
     "toggleTheme": "تبديل الوضع الداكن",
     "switchLanguage": "تغيير اللغة",
     "account": "حسابي",
-    "dashboard": "لوحة التحكم"
+    "dashboard": "لوحة التحكم",
+    "openMenu": "فتح القائمة",
+    "closeMenu": "إغلاق القائمة"
 }
