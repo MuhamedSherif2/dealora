@@ -5,15 +5,9 @@ import { useTranslations } from "next-intl";
 import { Link, useRouter } from "@/i18n/navigation";
 import { useLoginMutation } from "@/store/slices/authSlice";
 import { cookieHelper, TOKEN_KEY } from "@/lib/cookies";
-import type { ApiError } from "@/types";
+import { parseApiError } from "@/lib/apiError";
 import Input from "@/components/ui/input";
 import Button from "@/components/ui/button";
-
-// RTK Query errors have the backend's body in `.data`
-function getErrorMessage(err: unknown, fallback: string) {
-  const body = (err as { data?: ApiError })?.data;
-  return body?.message ?? fallback;
-}
 
 function Login() {
   const t = useTranslations("Login");
@@ -29,7 +23,7 @@ function Login() {
     setErrorMsg("");
 
     try {
-      const res = await login({ email, password }).unwrap();
+      const res = await login({ email: email.trim().toLowerCase(), password }).unwrap();
       const { token, user } = res.data;
 
       // the proxy reads these two cookies
@@ -38,7 +32,7 @@ function Login() {
 
       router.replace(user.role === "client" ? "/account" : "/dashboard");
     } catch (err) {
-      setErrorMsg(getErrorMessage(err, t("failed")));
+      setErrorMsg(parseApiError(err, t("failed")).message);
     }
   }
 
@@ -51,10 +45,26 @@ function Login() {
       </div>
 
       <form onSubmit={handleSubmit} className="flex flex-col gap-5">
-        <Input label={t("email")} type="email" dir="ltr" autoComplete="email" value={email} onChange={(e) => setEmail(e.target.value)} required/>
+        <Input
+          label={t("email")}
+          type="email"
+          dir="ltr"
+          autoComplete="email"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+          required
+        />
 
         <div className="flex flex-col gap-2">
-          <Input label={t("password")} type="password" dir="ltr" autoComplete="current-password" value={password} onChange={(e) => setPassword(e.target.value)} required/>
+          <Input
+            label={t("password")}
+            type="password"
+            dir="ltr"
+            autoComplete="current-password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            required
+          />
           <Link href="/forgot-password" className="self-end text-sm font-medium text-primary hover:underline">
             {t("forgot")}
           </Link>

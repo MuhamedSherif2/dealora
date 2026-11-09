@@ -1,6 +1,6 @@
 import { createApi } from "@reduxjs/toolkit/query/react";
 import baseQuery from "../baseQuery";
-import { RegisterRequest, RegisterResponse, LoginResponse, LoginRequest, ForgotPasswordResponse, ForgotPasswordRequest, ResetPasswordResponse, ResetPasswordRequest, MeResponse } from "@/types/auth"
+import { RegisterRequest, RegisterResponse, LoginResponse, LoginRequest, ForgotPasswordResponse, ForgotPasswordRequest, ResetPasswordResponse, ResetPasswordRequest, MeResponse, ChangePasswordResponse, ChangePasswordRequest } from "@/types/auth"
 
 export const authApi = createApi({
     reducerPath: "auth",
@@ -38,7 +38,12 @@ export const authApi = createApi({
             invalidatesTags: ["Auth"],
         }),
 
+        changePassword: builder.mutation<ChangePasswordResponse, ChangePasswordRequest>({
+            query: (body) => ({ url: "auth/password", method: "PATCH", body }),
+            invalidatesTags: ["Auth"],
+        }),
+
     })
 })
 
-export const { useRegisterMutation, useLoginMutation, useForgotPasswordMutation, useResetPasswordMutation, useGetProfileQuery, useUpdateProfileMutation} = authApi
+export const { useRegisterMutation, useLoginMutation, useForgotPasswordMutation, useResetPasswordMutation, useGetProfileQuery, useUpdateProfileMutation, useChangePasswordMutation } = authApi

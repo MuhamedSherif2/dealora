@@ -15,6 +15,7 @@ import Landing from "./Landing.json"
 import Account from "./Account.json"
 import Leads from "./Leads.json"
 import Webhooks from "./Webhooks.json"
+import PasswordReset from "./PasswordReset.json"
 
 export default {
     Home,
@@ -33,5 +34,6 @@ export default {
     Landing,
     Account,
     Leads,
-    Webhooks
+    Webhooks,
+    PasswordReset
 }

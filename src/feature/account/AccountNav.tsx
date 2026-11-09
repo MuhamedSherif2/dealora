@@ -2,6 +2,7 @@
 
 import { useTranslations } from "next-intl";
 import { Link, usePathname } from "@/i18n/navigation";
+import LogoutButton from "../auth/logout/LogoutButton";
 
 const items = [
     { href: "/account", key: "profile", exact: true },
@@ -31,6 +32,10 @@ export default function AccountNav() {
                     </Link>
                 );
             })}
+
+            <div className="mt-2 border-t border-border pt-2">
+                <LogoutButton className="w-full" />
+            </div>
         </nav>
     );
 }

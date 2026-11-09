@@ -4,7 +4,8 @@
         "profile": "Profile",
         "favorites": "Favorites",
         "savedSearches": "Saved searches",
-        "viewings": "My viewings"
+        "viewings": "My viewings",
+        "logout": "Log out"
     },
     "profile": {
         "error": "Could not load your profile",
@@ -27,7 +28,9 @@
         "license": "License number",
         "save": "Save changes",
         "saved": "Profile updated",
-        "failed": "Could not update your profile"
+        "failed": "Could not update your profile",
+        "editProfile": "Edit profile",
+        "changePassword": "Change password"
     },
     "favorites": {
         "title": "Favorites",
@@ -81,5 +84,16 @@
         "failed": "Could not update the viewing",
         "error": "Could not load your viewings",
         "retry": "Try again"
+    },
+    "password": {
+        "title": "Change password",
+        "current": "Current password",
+        "new": "New password",
+        "confirm": "Confirm new password",
+        "tooShort": "Password must be at least 8 characters",
+        "mismatch": "Passwords do not match",
+        "submit": "Update password",
+        "done": "Password updated",
+        "failed": "Could not update the password"
     }
 }

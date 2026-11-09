@@ -11,7 +11,7 @@ import { parseApiError } from "@/lib/apiError";
 import { useUpdateProfileMutation } from "@/store/slices/authSlice";
 import type { User } from "@/types/user";
 
-export default function ProfileForm({ user }: { user: User }) {
+export default function ProfileForm({ user, onSuccess }: { user: User; onSuccess?: () => void }) {
     const t = useTranslations("Account.profile");
     const locale = useLocale();
     const router = useRouter();
@@ -38,6 +38,8 @@ export default function ProfileForm({ user }: { user: User }) {
         try {
             await updateProfile(changes).unwrap();
             toast.success(t("saved"));
+            onSuccess?.();
+
             // the user chose another language: switch the site to it too
             if (changes.language && changes.language !== locale) {
                 router.replace(pathname, { locale: changes.language });
@@ -50,9 +52,7 @@ export default function ProfileForm({ user }: { user: User }) {
     }
 
     return (
-        <form onSubmit={handleSubmit} className="flex flex-col gap-5 rounded-2xl border border-border bg-card p-6 shadow-sm">
-            <h2 className="text-lg font-bold text-foreground">{t("formTitle")}</h2>
-
+        <form onSubmit={handleSubmit} className="flex flex-col gap-5">
             <div className="grid gap-4 sm:grid-cols-2">
                 <Input label={t("name")} value={form.name} onChange={(e) => setForm((f) => ({ ...f, name: e.target.value }))} error={fieldErrors.name} />
                 <Input label={t("email")} dir="ltr" value={user.email} disabled />
@@ -64,7 +64,6 @@ export default function ProfileForm({ user }: { user: User }) {
                     value={form.phone}
                     onChange={(e) => setForm((f) => ({ ...f, phone: e.target.value }))}
                     error={fieldErrors.phone}
-                    
                 />
                 <Select
                     label={t("language")}

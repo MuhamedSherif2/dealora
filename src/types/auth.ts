@@ -42,3 +42,16 @@ export type MeResponse = ApiResponse<{ user: User }>;
 export type ForgotPasswordResponse = MessageResponse;
 
 export type ResetPasswordResponse = MessageResponse;
+
+
+// types/auth.ts
+export interface ChangePasswordRequest {
+  currentPassword: string;
+  newPassword: string;
+}
+
+export interface ChangePasswordResponse {
+  status: "success";
+  message?: string;
+  data: { token: string };
+}
