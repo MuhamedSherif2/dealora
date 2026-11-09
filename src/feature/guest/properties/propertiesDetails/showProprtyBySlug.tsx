@@ -7,6 +7,7 @@ import { Link } from "@/i18n/navigation";
 import { useGetPropertyQuery } from "@/store/slices/propertySlice";
 import Button from "@/components/ui/button";
 import Loading from "@/components/ui/Loading";
+import FavoriteButton from "../FavoriteButton";
 import AddViewingUser from "@/feature/guest/viewing/appViewingUser";
 
 function ShowPropertyBySlug() {
@@ -115,9 +116,13 @@ function ShowPropertyBySlug() {
                         )}
                     </div>
 
-                    <header className="flex flex-col gap-2">
-                        <h1 className="text-2xl font-bold text-foreground sm:text-3xl">{p.i18n.title}</h1>
-                        <p className="text-muted-foreground">{[place, p.i18n.address].filter(Boolean).join(sep)}</p>
+                    <header className="flex items-start justify-between gap-4">
+                        <div className="flex flex-col gap-2">
+                            <h1 className="text-2xl font-bold text-foreground sm:text-3xl">{p.i18n.title}</h1>
+                            <p className="text-muted-foreground">{[place, p.i18n.address].filter(Boolean).join(sep)}</p>
+                        </div>
+
+                        <FavoriteButton propertyId={p._id} className="size-11 shrink-0 border border-border" />
                     </header>
 
                     {p.i18n.description && (

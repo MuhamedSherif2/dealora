@@ -4,6 +4,8 @@ import { useFormatter, useTranslations } from "next-intl";
 import { useGetUsersQuery } from "@/store/slices/adminSlice";
 import Button from "@/components/ui/button";
 import Loading from "@/components/ui/Loading";
+import CreateUser from "../_ui/createUser";
+import UpdateUser from "../_ui/updateUser";
 
 const roleStyles = {
     admin: "bg-primary/15 text-primary",
@@ -12,7 +14,7 @@ const roleStyles = {
 } as const;
 
 const cell = "whitespace-nowrap border-e border-border px-4 py-3";
-const columns = ["name", "email", "phone", "role", "company", "language", "status", "lastLogin", "createdAt"] as const;
+const columns = ["name", "email", "phone", "role", "company", "language", "status", "lastLogin", "createdAt", "actions"] as const;
 
 function GetUsers() {
     const t = useTranslations("Users");
@@ -40,6 +42,15 @@ function GetUsers() {
 
         return (
             <div className="w-full overflow-x-auto rounded-xl border border-border bg-card shadow-sm">
+                <div className="flex flex-wrap items-center justify-between gap-4 mx-5 my-3">
+                    <h1 className="text-2xl font-bold text-foreground">{t("title")}</h1>
+                    <div className="flex items-center gap-4">
+                        {!isLoading && !isError && (
+                            <span className="text-sm text-muted-foreground">{t("total", { count: users.length })}</span>
+                        )}
+                        <CreateUser />
+                    </div>
+                </div>
                 <table className="w-full min-w-max border-collapse text-start text-sm">
                     <thead className="bg-muted text-muted-foreground">
                         <tr className="border-b border-border">
@@ -94,6 +105,9 @@ function GetUsers() {
                                 </td>
                                 <td className="whitespace-nowrap px-4 py-3">
                                     {format.dateTime(new Date(u.createdAt), { dateStyle: "medium" })}
+                                </td>
+                                <td className="whitespace-nowrap px-4 py-3">
+                                    <UpdateUser user={u} />
                                 </td>
                             </tr>
                         ))}

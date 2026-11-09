@@ -34,7 +34,7 @@ export const adminApi = createApi({
             invalidatesTags: ["Admin"],
         }),
 
-        getWebhookLogs: builder.query<GetWebhookLogsResponse, GetWebhookLogsParams | void>({
+        getWebhookLogs: builder.query<GetWebhookLogsResponse, { page?: number; limit?: number; status?: string; event?: string } | void>({
             query: (params) => ({ url: "admin/webhook-logs", method: "GET", params: params ?? undefined }),
             providesTags: ["WebhookLogs"],
         }),

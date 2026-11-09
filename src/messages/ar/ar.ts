@@ -14,6 +14,7 @@ import Viewing from "./Viewing.json"
 import Landing from "./Landing.json"
 import Account from "./Account.json"
 import Leads from "./Leads.json"
+import Webhooks from "./Webhooks.json"
 
 export default {
     Home,
@@ -31,5 +32,6 @@ export default {
     Viewing,
     Landing,
     Account,
-    Leads
+    Leads,
+    Webhooks
 }

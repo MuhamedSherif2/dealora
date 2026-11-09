@@ -1,0 +1,36 @@
+{
+    "title": "سجل الـ Webhooks",
+    "subtitle": "كل حدث أرسله الموقع إلى n8n",
+    "columns": {
+        "event": "الحدث",
+        "status": "الحالة",
+        "attempts": "المحاولات",
+        "response": "الرد",
+        "error": "آخر خطأ",
+        "createdAt": "الوقت",
+        "actions": "الإجراءات"
+    },
+    "allStatuses": "كل الحالات",
+    "allEvents": "كل الأحداث",
+    "events": {
+        "lead_created": "عميل جديد",
+        "lead_status_changed": "تغيّر حالة عميل",
+        "viewing_requested": "طلب معاينة",
+        "viewing_status_changed": "تغيّر حالة معاينة",
+        "property_created": "عقار جديد",
+        "property_status_changed": "تغيّر حالة عقار",
+        "user_registered": "تسجيل مستخدم",
+        "password_reset_requested": "طلب استعادة كلمة السر"
+    },
+    "details": "التفاصيل",
+    "payload": "المحتوى المُرسل",
+    "sensitiveNote": "هذا الحدث يحتوي على سر، لذلك محتواه مخفي ولا يُعاد إرساله أبدًا.",
+    "retry": "إعادة إرسال الفاشل",
+    "retryConfirm": "إعادة إرسال كل الأحداث الفاشلة إلى n8n؟",
+    "retryNothing": "لا توجد أحداث فاشلة لإعادة إرسالها",
+    "retryDone": "أُعيد إرسال {retried}، نجح منها {succeeded}",
+    "retryFailed": "تعذّر إعادة إرسال الأحداث",
+    "empty": "لا توجد سجلات بعد",
+    "error": "تعذّر تحميل السجلات",
+    "tryAgain": "إعادة المحاولة"
+}

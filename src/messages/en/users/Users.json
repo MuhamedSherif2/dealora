@@ -10,7 +10,8 @@
         "language": "Language",
         "status": "Status",
         "lastLogin": "Last login",
-        "createdAt": "Joined"
+        "createdAt": "Joined",
+        "actions": "Actions"
     },
     "languages": {
         "ar": "Arabic",
@@ -21,5 +22,31 @@
     "never": "Never",
     "error": "Could not load users",
     "retry": "Try again",
-    "empty": "No users yet"
+    "empty": "No users yet",
+    "add": "Add user",
+    "edit": "Edit",
+    "addTitle": "Add a new user",
+    "editTitle": "Edit {name}",
+    "form": {
+        "name": "Full name",
+        "email": "Email",
+        "emailLocked": "Email cannot be changed",
+        "password": "Password",
+        "passwordHint": "At least 8 characters. Share it with the user securely",
+        "phone": "Phone number",
+        "phoneHint": "International format, e.g. +971501234567",
+        "role": "Role",
+        "language": "Language",
+        "company": "Company",
+        "license": "License number",
+        "isActive": "Active account",
+        "selfHint": "You cannot change your own role or disable your own account",
+        "cancel": "Cancel",
+        "close": "Close",
+        "create": "Create user",
+        "save": "Save changes",
+        "created": "User created",
+        "updated": "User updated",
+        "failed": "Could not save the user"
+    }
 }

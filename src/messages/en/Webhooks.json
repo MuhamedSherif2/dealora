@@ -1,0 +1,17 @@
+{
+    "title": "Webhook logs", "subtitle": "Every event the website sent to n8n",
+    "columns": { "event": "Event", "status": "Status", "attempts": "Attempts", "response": "Response", "error": "Last error", "createdAt": "Time", "actions": "Actions" },
+    "allStatuses": "All statuses", "allEvents": "All events",
+    "events": {
+      "lead_created": "Lead created", "lead_status_changed": "Lead status changed",
+      "viewing_requested": "Viewing requested", "viewing_status_changed": "Viewing status changed",
+      "property_created": "Property created", "property_status_changed": "Property status changed",
+      "user_registered": "User registered", "password_reset_requested": "Password reset requested"
+    },
+    "details": "Details", "payload": "Payload",
+    "sensitiveNote": "This event contained a secret, so its content is hidden and it is never re-sent.",
+    "retry": "Retry failed", "retryConfirm": "Re-send all failed events to n8n?",
+    "retryNothing": "No failed events to retry", "retryDone": "Retried {retried}, {succeeded} succeeded",
+    "retryFailed": "Could not retry the events",
+    "empty": "No logs yet", "error": "Could not load the logs", "tryAgain": "Try again"
+  }
